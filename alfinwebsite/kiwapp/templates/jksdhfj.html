@@ -1,66 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daftar Produk - Toko Online</title>
+    <title>Toko Online</title>
     <style>
         body {
-            font-family: 'Quicksand', sans-serif;
+            font-family: 'Arial', sans-serif;
+            background-color: #ffffff;
             margin: 0;
             padding: 0;
         }
-        header, nav, section, article, aside, footer {
-            display: block;
-        }
+
         header {
-            background-color: #0c0c0b;
-            color: white;
-            padding: 30px;
+            background-color: #fe620d;
+            color: #0a0a0a;
+            padding: 1em;
             text-align: center;
-            position: relative;
-            overflow: hidden;
+            animation: headerAnimation 1s ease-in-out;
         }
-        h1 {
-            margin: 0;
-            font-size: 2.5em;
-            animation: slideIn 1s ease-in-out;
-        }
-        @keyframes slideIn {
+
+        @keyframes headerAnimation {
             from {
-                transform: translateY(-50%);
                 opacity: 0;
+                transform: translateY(-20px);
             }
+
             to {
-                transform: translateY(0);
                 opacity: 1;
+                transform: translateY(0);
             }
         }
+
         nav {
-            background-color: #cfb337;
-            padding: 10px;
-            text-align: center;
-            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            margin-top: 1em;
+            animation: navAnimation 1s ease-in-out;
         }
-        nav a {
-            display: inline-block;
-            padding: 9px 16px;
-            text-decoration: none;
-            color: #333;
-            transition: color 0.3s;
+
+        @keyframes navAnimation {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-        nav a:hover {
-            color: #4CAF50;
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
         }
-        .nav-slider {
-            height: 3px;
-            background-color: #4CAF50;
+
+        nav li {
+            margin: 0 1em;
             transition: transform 0.3s ease-in-out;
         }
-        .nav-links {
-            display: flex;
-            justify-content: space-around;
+
+        nav li:hover {
+            transform: scale(1.1);
         }
+
+        nav a {
+            text-decoration: none;
+            color: #0b0b0b;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            color: #ff0000;
+        }
+
         section {
             padding: 20px;
         }
@@ -73,6 +91,7 @@
             bottom: 0;
             width: 100%;
         }
+        /* Gaya tambahan khusus untuk halaman produk */
         .produk {
             display: flex;
             flex-wrap: wrap;
@@ -117,28 +136,28 @@
         }
     </style>
 </head>
+
 <body>
 
     <header>
-        <h1>BRANDSHOP </h1>
+        <h1>SILAHKAN DIPILIH</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="checkout">Checkout</a></li>
+                <li><a href="keranjang">keranjang</a></li>
+                <li><a href="pesan">pesan</a></li>
+                <li><a href="login">login</a></li>
+            </ul>
+        </nav>
     </header>
-
-    <nav>
-        <a href="/">Beranda</a>
-        <a href="keranjang">Keranjang</a>
-        <a href="checkout">Checkout</a>
-        <a href="login">Login</a>
-        <a href="pesan">pesan</a>
-    </nav>
-
-
     <section>
-        <h2>SILAHKAN PILIH MAINAN YANG ADA SUKA</h2>
+        <h2>SILAHKAN PILIH BARANG YANG ANDA BUTUHKAN</h2>
         <div class="produk">
             <div class="produk-item">
-                <img src="https://static.promediateknologi.id/crop/59x340:993x962/750x500/webp/photo/2022/12/24/2875951176.jpg" alt="Produk 1">
+                <img src="https://images.tokopedia.net/img/cache/700/VqbcmM/2023/8/30/f66ff103-5ceb-4f79-bf68-e17855ae8749.jpg" alt="Produk 1">
                 <h3>Produk 1</h3>
-                <p>Deskripsi Produk 1.</p>
+                <h3>Velk king speed</h3>
                 <p>Harga: RP.100k</p>
                 <div class="produk-item-buttons">
                     <button onclick="window.location.href='checkout'" style="background-color: #28ca3e; color: white;">beli</button>
@@ -147,9 +166,9 @@
                 </div>
             </div>
             <div class="produk-item">
-                <img src="https://static.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/p1/937/2023/09/18/images-6-2-2916978038.jpeg" alt="Produk 2">
+                <img src="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//90/MTA-4234904/yss_yss_top_prime_sok_shockbreaker_motor_for_tiger_-32_cm-_320_mm-_full05_qq9groh.jpg" alt="Produk 2">
                 <h3>Produk 2</h3>
-                <p>Deskripsi Produk 2.</p>
+                <h3>Shock breaker belakang yss</h3>
                 <p>Harga: RP.150k</p>
                 <div class="produk-item-buttons">
                     <button onclick="window.location.href='checkout'" style="background-color: #28ca3e; color: white;">beli</button>
@@ -159,10 +178,10 @@
             </div>
 
             <div class="produk-item">
-                <img src="https://static.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/p1/937/2023/09/21/hot-wheels-datsun-4-Busurnusa-524254400.jpg" alt="Produk 2">
+                <img src="https://lzd-img-global.slatic.net/g/p/ba77d71064006b59235a489a0959d43d.jpg_720x720q80.jpg" alt="Produk 3">
                 <h3>Produk 3</h3>
-                <p>Deskripsi Produk 2.</p>
-                <p>Harga: RP.50k</p>
+                <h3>Karbu pwk 32 kawahara</h3>
+                <p>Harga: RP.900k</p>
                 <div class="produk-item-buttons">
                     <button onclick="window.location.href='checkout'" style="background-color: #28ca3e; color: white;">beli</button>
                     <button onclick="window.location.href='pesan'" style="background-color: #5d5a56; color: white;">pesan</button>
@@ -171,10 +190,10 @@
             </div>
 
             <div class="produk-item">
-                <img src="https://static.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/p1/937/2023/11/04/hot-wheels-Mercedes-AMG-GT-2015-busurnusa-2821087535.png" alt="Produk 2">
+                <img src="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//112/MTA-93978616/oem_oem_full01.jpg" alt="Produk 4">
                 <h3>Produk 4</h3>
-                <p>Deskripsi Produk 2.</p>
-                <p>Harga: RP.</p>
+                <h3>Knalpot AHM malaysia original</h3>
+                <p>Harga: RP.800k</p>
                 <div class="produk-item-buttons">
                     <button onclick="window.location.href='checkout'" style="background-color: #28ca3e; color: white;">beli</button>
                     <button onclick="window.location.href='pesan'" style="background-color: #5d5a56; color: white;">pesan</button>
@@ -183,10 +202,10 @@
             </div>
 
             <div class="produk-item">
-                <img src="https://static.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/p1/937/2023/11/26/hot-wheels-ikonik-Datsun-510-15-busurnusa-4142040415.png" alt="Produk 2">
+                <img src="https://lzd-img-global.slatic.net/g/ff/kf/S99228594824548d3b4c6c22f94a59a95P.jpg_720x720q80.jpg" alt="Produk 5">
                 <h3>Produk 5</h3>
-                <p>Deskripsi Produk 2.</p>
-                <p>Harga: RP.</p>
+                <h3>Master rem brembo </h3>
+                <p>Harga: RP.300k</p>
                 <div class="produk-item-buttons">
                     <button onclick="window.location.href='checkout'" style="background-color: #28ca3e; color: white;">beli</button>
                     <button onclick="window.location.href='pesan'" style="background-color: #5d5a56; color: white;">pesan</button>
@@ -195,10 +214,10 @@
             </div>
 
             <div class="produk-item">
-                <img src="https://static.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/p1/937/2023/11/16/Mobil-Mini-Hot-Wheels-Pilihan-Hadiah-Kreatif-untuk-Anak-Anak-yang-Bersemangat-Busurnusacom-1001384921.jpg" alt="Produk 2">
+                <img src="https://images.tokopedia.net/img/cache/700/VqbcmM/2023/11/7/3b9c4796-8d6f-4a9d-a396-84d14a95f190.jpg" alt="Produk 6">
                 <h3>Produk 6</h3>
-                <p>Deskripsi Produk 2.</p>
-                <p>Harga: RP.</p>
+                <h3>Kaliper brembo depan</h3>
+                <p>Harga: RP.500k</p>
                 <div class="produk-item-buttons">
                     <button onclick="window.location.href='checkout'" style="background-color: #28ca3e; color: white;">beli</button>
                     <button onclick="window.location.href='pesan'" style="background-color: #5d5a56; color: white;">pesan</button>
@@ -207,10 +226,10 @@
             </div>
 
             <div class="produk-item">
-                <img src="https://cf.shopee.co.id/file/id-11134201-7quky-lgnfi5cazezv98" alt="Produk 2">
+                <img src="https://images.tokopedia.net/img/cache/700/VqbcmM/2023/11/3/8d308212-d8e1-453c-b1c9-2eade6323b49.jpg" alt="Produk 7">
                 <h3>Produk 7</h3>
-                <p>Deskripsi Produk 2.</p>
-                <p>Harga: RP.</p>
+                <h3>Shock depan kyb</h3>
+                <p>Harga: RP.950k</p>
                 <div class="produk-item-buttons">
                     <button onclick="window.location.href='checkout'" style="background-color: #28ca3e; color: white;">beli</button>
                     <button onclick="window.location.href='pesan'" style="background-color: #5d5a56; color: white;">pesan</button>
@@ -219,10 +238,10 @@
             </div>
 
             <div class="produk-item">
-                <img src="https://images.tokopedia.net/img/cache/700/VqbcmM/2022/9/6/841af12e-f6f7-40c8-94b1-4593de9cc4a2.jpg" alt="Produk 2">
+                <img src="https://img.ws.mms.shopee.co.id/7e10ff9bb455a1df3bbbccea03ca9ba6" alt="Produk 8">
                 <h3>Produk 8</h3>
-                <p>Deskripsi Produk 2.</p>
-                <p>Harga: RP.</p>
+                <h3>Pirelli diablo rosso corsa ll</h3>
+                <p>Harga: RP.950k</p>
                 <div class="produk-item-buttons">
                     <button onclick="window.location.href='checkout'" style="background-color: #28ca3e; color: white;">beli</button>
                     <button onclick="window.location.href='pesan'" style="background-color: #5d5a56; color: white;">pesan</button>
@@ -231,10 +250,10 @@
             </div>
 
             <div class="produk-item">
-                <img src="https://images.tokopedia.net/img/cache/700/product-1/2018/11/21/1464207/1464207_d483ed62-fab7-4350-89ff-c439ce9d2a02_1560_1560.jpg" alt="Produk 2">
+                <img src="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//90/MTA-3306194/lightech_lightech-tabung-minyak-rem-original---kecil_full14.jpg" alt="Produk 9">
                 <h3>Produk 9</h3>
-                <p>Deskripsi Produk 2.</p>
-                <p>Harga: RP.</p>
+                <h3>Lighteck</h3>
+                <p>Harga: RP.800k</p>
                 <div class="produk-item-buttons">
                     <button onclick="window.location.href='checkout'" style="background-color: #28ca3e; color: white;">beli</button>
                     <button onclick="window.location.href='pesan'" style="background-color: #5d5a56; color: white;">pesan</button>
@@ -243,10 +262,10 @@
             </div>
 
             <div class="produk-item">
-                <img src="https://images.tokopedia.net/img/cache/700/VqbcmM/2023/9/19/fdce6869-b207-480b-9010-31a89b9633e9.jpg" alt="Produk 2">
+                <img src="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//catalog-image/98/MTA-141339049/no-brand_no-brand_full04.jpg" alt="Produk 10">
                 <h3>Produk 10</h3>
-                <p>Deskripsi Produk 2.</p>
-                <p>Harga: RP.</p>
+                <h3>Baut king nut</h3>
+                <p>Harga: RP.850k</p>
                 <div class="produk-item-buttons">
                     <button onclick="window.location.href='checkout'" style="background-color: #28ca3e; color: white;">beli</button>
                     <button onclick="window.location.href='pesan'" style="background-color: #5d5a56; color: white;">pesan</button>
@@ -255,10 +274,10 @@
             </div>
 
             <div class="produk-item">
-                <img src="https://images.tokopedia.net/img/cache/700/VqbcmM/2021/11/19/5174e683-0f9d-4c0c-b485-9f337b802b22.jpg" alt="Produk 2">
+                <img src="https://down-id.img.susercontent.com/file/8e28c6a8a905b2b94e39d11ebe5954c1" alt="Produk 11">
                 <h3>Produk 11</h3>
-                <p>Deskripsi Produk 2.</p>
-                <p>Harga: RP.</p>
+                <h3>Oli deltalube</h3>
+                <p>Harga: RP.250k</p>
                 <div class="produk-item-buttons">
                     <button onclick="window.location.href='checkout'" style="background-color: #28ca3e; color: white;">beli</button>
                     <button onclick="window.location.href='pesan'" style="background-color: #5d5a56; color: white;">pesan</button>
@@ -267,10 +286,10 @@
             </div>
 
             <div class="produk-item">
-                <img src="https://images.tokopedia.net/img/cache/700/VqbcmM/2022/2/28/c26865e9-8bb1-4c20-913f-e6c5c4af9abd.jpg" alt="Produk 2">
+                <img src="https://images.tokopedia.net/img/cache/700/hDjmkQ/2023/3/17/9c217124-797e-496f-8f0f-602a48b195fc.jpg" alt="Produk 12">
                 <h3>Produk 12</h3>
-                <p>Deskripsi Produk 2.</p>
-                <p>Harga: RP.</p>
+                <h3>Spido digital force1</h3>
+                <p>Harga: RP.500K</p>
                 <div class="produk-item-buttons">
                     <button onclick="window.location.href='checkout'" style="background-color: #28ca3e; color: white;">beli</button>
                     <button onclick="window.location.href='pesan'" style="background-color: #5d5a56; color: white;">pesan</button>
@@ -279,10 +298,10 @@
             </div>
 
             <div class="produk-item">
-                <img src="https://images.tokopedia.net/img/cache/700/VqbcmM/2021/3/31/3b0feab1-034e-4277-bf35-dbcc9eb9398b.jpg" alt="Produk 2">
+                <img src="https://images.tokopedia.net/img/cache/700/VqbcmM/2022/12/16/cd67052d-873e-4c45-a0c8-7880b44f6c8e.jpg" alt="Produk 13">
                 <h3>Produk 13</h3>
-                <p>Deskripsi Produk 2.</p>
-                <p>Harga: RP.</p>
+                <H3>Piston moto 1</h3>
+                <p>Harga: RP.250k</p>
                 <div class="produk-item-buttons">
                     <button onclick="window.location.href='checkout'" style="background-color: #28ca3e; color: white;">beli</button>
                     <button onclick="window.location.href='pesan'" style="background-color: #5d5a56; color: white;">pesan</button>
@@ -291,10 +310,10 @@
             </div>
 
             <div class="produk-item">
-                <img src="https://images.tokopedia.net/img/cache/700/hDjmkQ/2023/7/8/a0ec269b-1390-48eb-83cc-ce3e388f5ca4.jpg" alt="Produk 2">
+                <img src="https://down-id.img.susercontent.com/file/id-11134207-23030-gx1vpo11reovac" alt="Produk 14">
                 <h3>Produk 14</h3>
-                <p>Deskripsi Produk 2.</p>
-                <p>Harga: RP.</p>
+                <h3>Biled aes turbo</h3>
+                <p>Harga: RP.800k</p>
                 <div class="produk-item-buttons">
                     <button onclick="window.location.href='checkout'" style="background-color: #28ca3e; color: white;">beli</button>
                     <button onclick="window.location.href='pesan'" style="background-color: #5d5a56; color: white;">pesan</button>
@@ -303,10 +322,10 @@
             </div>
 
             <div class="produk-item">
-                <img src="https://images.tokopedia.net/img/cache/700/VqbcmM/2023/10/25/5b04791c-1dfb-49cb-8bc5-4ff711f149e2.jpg" alt="Produk 2">
+                <img src="https://down-id.img.susercontent.com/file/3c9e98a2c91c38ff086a8dac893d9446" alt="Produk 15">
                 <h3>Produk 15</h3>
-                <p>Deskripsi Produk 2.</p>
-                <p>Harga: RP.</p>
+                <h3>Disc piringan Galfer 260mm</h3>
+                <p>Harga: RP.900k</p>
                 <div class="produk-item-buttons">
                     <button onclick="window.location.href='checkout'" style="background-color: #28ca3e; color: white;">beli</button>
                     <button onclick="window.location.href='pesan'" style="background-color: #5d5a56; color: white;">pesan</button>
@@ -315,10 +334,10 @@
             </div>
 
             <div class="produk-item">
-                <img src="https://images.tokopedia.net/img/cache/700/VqbcmM/2023/1/10/b6a0093c-e9c1-46a9-8580-652ad8bec86a.jpg" alt="Produk 2">
+                <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSuf2bQSZmfy66hIW6FY4LrfZeJFBnRyQsTabqDrEMQHYuG8ZYO8fJDM0Xae8bk-n-yZBNJlD5a5XkkhnuRA7ejkp8NkA2bDFaHjhXu9w8&usqp=CAE" alt="Produk 16">
                 <h3>Produk 16</h3>
-                <p>Deskripsi Produk 2.</p>
-                <p>Harga: RP.</p>
+                <h3>Gear belakang RIDE IT</h3>
+                <p>Harga: RP.950k</p>
                 <div class="produk-item-buttons">
                     <button onclick="window.location.href='checkout'" style="background-color: #28ca3e; color: white;">beli</button>
                     <button onclick="window.location.href='pesan'" style="background-color: #5d5a56; color: white;">pesan</button>
@@ -327,10 +346,10 @@
             </div>
 
             <div class="produk-item">
-                <img src="https://images.tokopedia.net/img/cache/700/product-1/2019/6/20/2482291/2482291_199b69f8-2266-4433-b311-442d0c67726c_1024_1024.jpg" alt="Produk 2">
+                <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQrGvJLsX9nG0XO9t7SnjdvAZHI59d3FFf-aFJYKquJClabQb_vwszrhv0EWsPbWQRGh_fFZBkTXzaaFEvJ01w3BJAvXK7w2KkF6L7Mrr-c&usqp=CAE" alt="Produk 17">
                 <h3>Produk 17</h3>
-                <p>Deskripsi Produk 2.</p>
-                <p>Harga: RP.</p>
+                <h3>Rantai TK RACING</H3>
+                <p>Harga: RP.550K</p>
                 <div class="produk-item-buttons">
                     <button onclick="window.location.href='checkout'" style="background-color: #28ca3e; color: white;">beli</button>
                     <button onclick="window.location.href='pesan'" style="background-color: #5d5a56; color: white;">pesan</button>
@@ -339,82 +358,10 @@
             </div>
 
             <div class="produk-item">
-                <img src="https://images.tokopedia.net/img/cache/700/product-1/2019/10/15/78342466/78342466_103ea8a3-4658-4350-a734-560465fa345c_700_700" alt="Produk 2">
+                <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQmaVQwVyopFmwYmWn60LCkcNcDvHLT52GR_6ETfzORiOr9I4E_H-7d0CAbYDnowRnZ8KQ0Rgep-ux4A-IYNwGj49zHwikEr2Rm-5WY_wzzI3GaKbilJIw29g&usqp=CAE" alt="Produk 18">
                 <h3>Produk 18</h3>
-                <p>Deskripsi Produk 2.</p>
-                <p>Harga: RP.</p>
-                <div class="produk-item-buttons">
-                    <button onclick="window.location.href='checkout'" style="background-color: #28ca3e; color: white;">beli</button>
-                    <button onclick="window.location.href='pesan'" style="background-color: #5d5a56; color: white;">pesan</button>
-                    <button onclick="window.location.href='keranjang'" style="background-color: #FF9800; color: white;">Keranjang</button>
-                </div>
-            </div>
-
-            <div class="produk-item">
-                <img src="https://down-id.img.susercontent.com/file/72842952886dc99d9562a64bba4ab42d" alt="Produk 2">
-                <h3>Produk 19</h3>
-                <p>Deskripsi Produk 2.</p>
-                <p>Harga: RP.</p>
-                <div class="produk-item-buttons">
-                    <button onclick="window.location.href='checkout'" style="background-color: #28ca3e; color: white;">beli</button>
-                    <button onclick="window.location.href='pesan'" style="background-color: #5d5a56; color: white;">pesan</button>
-                    <button onclick="window.location.href='keranjang'" style="background-color: #FF9800; color: white;">Keranjang</button>
-                </div>
-            </div>
-
-            <div class="produk-item">
-                <img src="https://down-id.img.susercontent.com/file/7ab76f0127d8e8cb9961c97be8786cca" alt="Produk 2">
-                <h3>Produk 20</h3>
-                <p>Deskripsi Produk 2.</p>
-                <p>Harga: RP.</p>
-                <div class="produk-item-buttons">
-                    <button onclick="window.location.href='checkout'" style="background-color: #28ca3e; color: white;">beli</button>
-                    <button onclick="window.location.href='pesan'" style="background-color: #5d5a56; color: white;">pesan</button>
-                    <button onclick="window.location.href='keranjang'" style="background-color: #FF9800; color: white;">Keranjang</button>
-                </div>
-            </div>
-
-            <div class="produk-item">
-                <img src="https://lzd-img-global.slatic.net/g/ff/kf/Sf8f8ce52f7944efc9935f0206240d18fQ.jpg_720x720q80.jpg" alt="Produk 2">
-                <h3>Produk 21</h3>
-                <p>Deskripsi Produk 2.</p>
-                <p>Harga: RP.</p>
-                <div class="produk-item-buttons">
-                    <button onclick="window.location.href='checkout'" style="background-color: #28ca3e; color: white;">beli</button>
-                    <button onclick="window.location.href='pesan'" style="background-color: #5d5a56; color: white;">pesan</button>
-                    <button onclick="window.location.href='keranjang'" style="background-color: #FF9800; color: white;">Keranjang</button>
-                </div>
-            </div>
-
-            <div class="produk-item">
-                <img src="https://down-id.img.susercontent.com/file/52eb71cf6a6a76d1b870f3e8de8dc445" alt="Produk 2">
-                <h3>Produk 22</h3>
-                <p>Deskripsi Produk 2.</p>
-                <p>Harga: RP.</p>
-                <div class="produk-item-buttons">
-                    <button onclick="window.location.href='checkout'" style="background-color: #28ca3e; color: white;">beli</button>
-                    <button onclick="window.location.href='pesan'" style="background-color: #5d5a56; color: white;">pesan</button>
-                    <button onclick="window.location.href='keranjang'" style="background-color: #FF9800; color: white;">Keranjang</button>
-                </div>
-            </div>
-
-            <div class="produk-item">
-                <img src="https://img.ws.mms.shopee.co.id/da37d942ee36dfcfd32bbc9f2941d504" alt="Produk 2">
-                <h3>Produk 23</h3>
-                <p>Deskripsi Produk 2.</p>
-                <p>Harga: RP.</p>
-                <div class="produk-item-buttons">
-                    <button onclick="window.location.href='checkout'" style="background-color: #28ca3e; color: white;">beli</button>
-                    <button onclick="window.location.href='pesan'" style="background-color: #5d5a56; color: white;">pesan</button>
-                    <button onclick="window.location.href='keranjang'" style="background-color: #FF9800; color: white;">Keranjang</button>
-                </div>
-            </div>
-
-            <div class="produk-item">
-                <img src="https://images.tokopedia.net/img/cache/700/VqbcmM/2021/12/18/8f2a309c-5e6a-46e2-8d7a-e8eb9e622b48.jpg" alt="Produk 2">
-                <h3>Produk 24</h3>
-                <p>Deskripsi Produk 2.</p>
-                <p>Harga: RP.</p>
+                <h3>Stabilizer motor MOTO 1</h3>
+                <p>Harga: RP.1.500jt</p>
                 <div class="produk-item-buttons">
                     <button onclick="window.location.href='checkout'" style="background-color: #28ca3e; color: white;">beli</button>
                     <button onclick="window.location.href='pesan'" style="background-color: #5d5a56; color: white;">pesan</button>
@@ -439,5 +386,8 @@
         }
     </script>
 
+
+
 </body>
+
 </html>

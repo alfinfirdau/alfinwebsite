@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page</title>
+    <style>
+       body {
+            font-family: 'Quicksand', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header, nav, section, article, aside, footer {
+            display: block;
+        }
+        header {
+            background-color: #0c0c0b;
+            color: white;
+            padding: 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+            animation: slideIn 1s ease-in-out;
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        nav {
+            background-color: #cfb337;
+            padding: 10px;
+            text-align: center;
+            overflow: hidden;
+        }
+        nav a {
+            display: inline-block;
+            padding: 9px 16px;
+            text-decoration: none;
+            color: #333;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #4CAF50;
+        }
+        .nav-slider {
+            height: 3px;
+            background-color: #4CAF50;
+            transition: transform 0.3s ease-in-out;
+        }
+        .nav-links {
+            display: flex;
+            justify-content: space-around;
+        }
+        section {
+            padding: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        section {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            display: grid;
+            gap: 10px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #cfb337;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>BRANDSHOP </h1>
+    </header>
+
+    <nav>
+        <a href="/">Beranda</a>
+        <a href="keranjang">Keranjang</a>
+        <a href="checkout">Checkout</a>
+        <a href="login">Login</a>
+        <a href="pesan">pesan</a>
+    </nav>
+
+    <section>
+        <div class="product">
+            <h2>Nama Produk</h2>
+            <p>Deskripsi produk dan detail lainnya...</p>
+            <p>Harga: $99.99</p>
+        </div>
+
+        <form action="/proses-pembayaran" method="post">
+            <h2>Informasi Pembayaran</h2>
+
+            <label for="nama">Nama:</label>
+            <input type="text" id="nama" name="nama" required>
+
+            <label for="alamat">Alamat:</label>
+            <textarea id="alamat" name="alamat" required></textarea>
+
+            <label for="kartu-kredit">Nomor Kartu Kredit:</label>
+            <input type="text" id="kartu-kredit" name="kartu-kredit" required>
+
+            <label for="metode-pembayaran">Metode Pembayaran:</label>
+            <select id="metode-pembayaran" name="metode-pembayaran" required>
+                <option value="kartu-kredit">Kartu Kredit</option>
+                <option value="paypal">PayPal</option>
+            </select>
+
+            <button type="submit">Checkout</button>
+        </form>
+    </section>
+
+</body>
+</html>

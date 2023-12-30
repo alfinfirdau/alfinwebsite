@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Toko Online</title>
+    <style>
+ body {
+            font-family: 'Quicksand', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header, nav, section, article, aside, footer {
+            display: block;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+            animation: slideIn 1s ease-in-out;
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        nav {
+            background-color: #b8a03d;
+            padding: 10px;
+            text-align: center;
+            overflow: hidden;
+        }
+        nav a {
+            display: inline-block;
+            padding: 9px 16px;
+            text-decoration: none;
+            color: #333;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #4CAF50;
+        }
+        .nav-slider {
+            height: 3px;
+            background-color: #4CAF50;
+            transition: transform 0.3s ease-in-out;
+        }
+        .nav-links {
+            display: flex;
+            justify-content: space-around;
+        }
+        section {
+            padding: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        /* Gaya tambahan khusus untuk halaman login */
+        .login-container {
+            background-color: #ffffff;
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #000000;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .login-container button:hover {
+            background-color: #333333;
+            transform: scale(1.05);
+        }
+
+        .login-container .message {
+            text-align: center;
+            color: red;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>BRANDSHOP</h1>
+    </header>
+
+    <nav>
+        <a href="/">Beranda</a>
+        <a href="keranjang">Keranjang</a>
+        <a href="checkout">Checkout</a>
+        <a href="login">Login</a>
+        <a href="pesan">pesan</a>
+    </nav>
+
+
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <button type="button" onclick="checkLogin()">Login</button>
+        </form>
+        <div class="message" id="message"></div>
+    </div>
+
+    <script>
+        function checkLogin() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Contoh validasi sederhana
+            if (username === 'admin' && password === 'admin123') {
+                document.getElementById('message').innerText = 'Login berhasil!';
+                // Di sini Anda bisa mengarahkan pengguna ke halaman dashboard atau halaman lainnya
+            } else {
+                document.getElementById('message').innerText = 'Username atau password salah!';
+            }
+        }
+    </script>
+
+</body>
+
+</body>
+</html>

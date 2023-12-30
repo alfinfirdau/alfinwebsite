@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kirim Pesan WhatsApp</title>
+    <style>
+        body {
+            font-family: 'Quicksand', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header, nav, section, article, aside, footer {
+            display: block;
+        }
+        header {
+            background-color: #0c0c0b;
+            color: white;
+            padding: 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+            animation: slideIn 1s ease-in-out;
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        nav {
+            background-color: #cfb337;
+            padding: 10px;
+            text-align: center;
+            overflow: hidden;
+        }
+        nav a {
+            display: inline-block;
+            padding: 9px 16px;
+            text-decoration: none;
+            color: #333;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #000000;
+        }
+        .nav-slider {
+            height: 3px;
+            background-color: #cfb337;
+            transition: transform 0.3s ease-in-out;
+        }
+        .nav-links {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        section {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        a {
+            display: inline-block;
+            background-color: #cfb337;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>BRANDSHOP </h1>
+    </header>
+    
+    <nav>
+        <a href="/">Beranda</a>
+        <a href="keranjang">Keranjang</a>
+        <a href="checkout">Checkout</a>
+        <a href="login">Login</a>
+        <a href="pesan">pesan</a>
+    </nav>
+
+    <section>
+        <h1>Kirim Pesan WhatsApp</h1>
+        <p>Silakan klik tombol di bawah ini untuk mengirim pesan WhatsApp:</p>
+        <a href="https://wa.me/6285606282988" target="_blank">Kirim Pesan WhatsApp</a>
+    </section>
+
+</body>
+</html>

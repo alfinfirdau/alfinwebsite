@@ -6,8 +6,15 @@ def home(request):
     template=loader.get_template('home.html')
     return HttpResponse(template.render())
 
-def tentang(request):
-    return render(request, 'tentang.html')
+def keranjang (request):
+    return render(request, 'keranjang.html')
 
-def kontak(request):
-    return render(request, 'kontak.html')
+def login(request):
+    return render(request, 'login.html')
+
+def checkout(request):
+    return render(request, 'checkout.html')
+
+def pesan(request):
+    return render(request, 'pesan.html')
+
